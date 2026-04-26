@@ -11,6 +11,7 @@ export default function About(){
             src="/thrift-shopping.jpg"
             alt=""
             fill
+            priority
             sizes="100vw"
             className="object-cover"
             style={{ opacity: 0.18, mixBlendMode: 'multiply' }}

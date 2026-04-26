@@ -12,6 +12,7 @@ export default function Footer(){
           src="/disco-ball.jpg"
           alt=""
           fill
+          priority
           sizes="144px"
           className="object-contain"
         />

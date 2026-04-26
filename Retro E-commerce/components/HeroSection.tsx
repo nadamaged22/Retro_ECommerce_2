@@ -12,6 +12,7 @@ export default function HeroSection(){
           src="/retro-collage.jpg"
           alt=""
           fill
+          priority
           sizes="100vw"
           className="object-cover"
           style={{ opacity: 0.08, mixBlendMode: 'multiply' }}

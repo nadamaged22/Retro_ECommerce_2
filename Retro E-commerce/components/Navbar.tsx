@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext'
 
 export default function Navbar(){
   const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const { itemCount } = useCart()
   return (
     <header className="bg-white border-b border-retroTan">
@@ -27,7 +28,7 @@ export default function Navbar(){
               <circle cx="10" cy="20" r="1" fill="#2C1810"/>
               <circle cx="18" cy="20" r="1" fill="#2C1810"/>
             </svg>
-            {itemCount > 0 && (
+            {mounted && itemCount > 0 && (
               <span className="absolute -top-2 -right-2 bg-mustard text-xs text-deepDark font-bold px-2 rounded-full">{itemCount}</span>
             )}
           </Link>

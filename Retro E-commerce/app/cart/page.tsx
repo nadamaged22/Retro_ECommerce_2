@@ -22,6 +22,7 @@ export default function CartPage(){
         <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
         {items.map((it:any)=> <CartItem key={it.id} item={it} />)}
       </div>
+      
       <aside className="p-4 bg-white border-2 border-retroTan rounded">
         <h3 className="font-semibold">Order Summary</h3>
         <div className="mt-2">Subtotal: <strong>EGP{subtotal.toFixed(2)}</strong></div>
