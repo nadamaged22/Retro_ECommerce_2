@@ -2,13 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import { products } from '../../lib/products'
 import ProductCard from '../../components/ProductCard'
+import { CldImage } from 'next-cloudinary'
 
 export default function Shop(){
   return (
     <div>
       {/* Decorative banner — retro collage with overlay title */}
       <div className="relative h-36 rounded-lg overflow-hidden mb-6 border-2 border-retroTan">
-        <Image
+        <CldImage
           src="retro-ecommerce/retro-collage_hdblop"
           alt="Retro fashion collage banner"
           fill
