@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CldImage } from 'next-cloudinary'
 
 export default function HeroSection(){
@@ -8,8 +9,8 @@ export default function HeroSection(){
     <section className="relative bg-[linear-gradient(135deg,#F5F0E8_0%,#E8DFC8_100%)] rounded-lg p-8 mb-8 overflow-hidden">
       {/* Faded collage background */}
       <div className="absolute inset-0 pointer-events-none select-none">
-        <CldImage
-          src="retro-ecommerce/retro-collage_hdblop"
+        <Image
+          src="/retro-collage.jpg"
           alt=""
           fill
           priority
