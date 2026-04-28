@@ -9,7 +9,7 @@ export default function Shop(){
       {/* Decorative banner — retro collage with overlay title */}
       <div className="relative h-36 rounded-lg overflow-hidden mb-6 border-2 border-retroTan">
         <Image
-          src="/retro-collage.jpg"
+          src="retro-ecommerce/retro-collage_hdblop"
           alt="Retro fashion collage banner"
           fill
           sizes="100vw"
