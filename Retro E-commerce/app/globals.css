@@ -21,7 +21,7 @@
     position: fixed;
     inset: 0;
     z-index: -1;
-    background-image: url('/retro-bg.jpg');
+    background-image: url('https://res.cloudinary.com/dnzxttqsz/image/upload/retro-ecommerce/retro-bg_modkro');
     background-size: cover;
     background-position: center;
     filter: blur(6px) saturate(0.7);

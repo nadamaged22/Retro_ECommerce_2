@@ -1,5 +1,6 @@
+'use client'
 import React from 'react'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 export default function About(){
   return (
@@ -7,8 +8,8 @@ export default function About(){
       {/* Header banner — thrift-shopping image faded behind text */}
       <header className="relative bg-white p-6 rounded-lg border-2 border-retroTan overflow-hidden min-h-[120px]">
         <div className="absolute inset-0 pointer-events-none select-none">
-          <Image
-            src="/thrift-shopping.jpg"
+          <CldImage
+            src="retro-ecommerce/thrift-shopping_mq9xxh"
             alt=""
             fill
             priority
@@ -38,8 +39,8 @@ export default function About(){
       <div className="relative">
         {/* Floating disco ball — visible only on md+ screens */}
         <div className="hidden md:block absolute -right-4 -top-6 w-28 h-28 pointer-events-none select-none z-0 opacity-60">
-          <Image
-            src="/disco-ball.jpg"
+          <CldImage
+            src="retro-ecommerce/disco-ball_bvfwz3"
             alt="Decorative disco ball illustration"
             fill
             sizes="112px"

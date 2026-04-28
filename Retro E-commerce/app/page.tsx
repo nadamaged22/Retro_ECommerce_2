@@ -1,5 +1,6 @@
+'use client'
 import React from 'react'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import HeroSection from '../components/HeroSection'
 import { products } from '../lib/products'
 import ProductCard from '../components/ProductCard'
@@ -27,8 +28,8 @@ export default function Home(){
             </div>
           </div>
           <div className="w-40 h-52 relative flex-shrink-0 opacity-90 retro-frame retro-img-hover">
-            <Image
-              src="/clothing-rack.jpg"
+            <CldImage
+              src="retro-ecommerce/clothing-rack_kljlhs"
               alt="Illustration of a vintage clothing rack"
               fill
               sizes="160px"

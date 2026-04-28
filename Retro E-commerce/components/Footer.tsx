@@ -1,15 +1,15 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 export default function Footer(){
   return (
     <footer className="bg-deepDark text-retroBg mt-8 relative overflow-hidden">
       {/* Faded disco ball decoration — visible on md+ */}
       <div className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2 w-36 h-36 pointer-events-none select-none opacity-15">
-        <Image
-          src="/disco-ball.jpg"
+        <CldImage
+          src="retro-ecommerce/disco-ball_bvfwz3"
           alt=""
           fill
           priority

@@ -1,15 +1,15 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 export default function HeroSection(){
   return (
     <section className="relative bg-[linear-gradient(135deg,#F5F0E8_0%,#E8DFC8_100%)] rounded-lg p-8 mb-8 overflow-hidden">
       {/* Faded collage background */}
       <div className="absolute inset-0 pointer-events-none select-none">
-        <Image
-          src="/retro-collage.jpg"
+        <CldImage
+          src="retro-ecommerce/retro-collage_hdblop"
           alt=""
           fill
           priority
@@ -32,8 +32,8 @@ export default function HeroSection(){
 
         {/* Retro globe mascot */}
         <div className="w-72 h-72 md:w-96 md:h-96 relative flex-shrink-0 drop-shadow-xl">
-          <Image
-            src="/logo2.png"
+          <CldImage
+            src="retro-ecommerce/logo2_p6em1h"
             alt="Retro globe mascot character"
             fill
             sizes="(max-width: 777px) 288px, 384px"

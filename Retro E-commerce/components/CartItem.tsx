@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import { useCart } from '../context/CartContext'
 
 export default function CartItem({ item }: any){
@@ -8,7 +8,7 @@ export default function CartItem({ item }: any){
   return (
     <div className="flex gap-4 items-center border-b border-retroTan py-4">
       <div className="w-24 h-20 bg-gray-100 rounded overflow-hidden flex items-center justify-center">
-        <Image src={item.image || '/placeholder.png'} alt={item.name} width={160} height={120} className="object-cover" />
+        <CldImage src={item.image || 'retro-ecommerce/placeholder'} alt={item.name} width={160} height={120} quality="auto" format="auto" className="object-cover" />
       </div>
       <div className="flex-1">
         <div className="font-semibold">{item.name}</div>

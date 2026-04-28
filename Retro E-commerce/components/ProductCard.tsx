@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import { Product } from '../lib/products'
 import { useCart } from '../context/CartContext'
 
@@ -21,7 +21,18 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           className="w-full h-48 bg-gray-100 rounded-md overflow-hidden flex items-center justify-center mb-3 cursor-zoom-in"
           onClick={() => setLightbox(true)}
         >
-          <Image src={product.image || '/placeholder.png'} alt={product.name} width={400} height={300} className={`object-cover w-full h-full ${objPos}`} priority={priority} />
+          <CldImage
+            src={product.image || 'placeholder'}
+            alt={product.name}
+            width={400}
+            height={300}
+            crop="fill"
+            gravity={product.objectPosition === 'bottom' ? 'south' : product.objectPosition === 'top' ? 'north' : 'center'}
+            quality="auto"
+            format="auto"
+            className={`object-cover w-full h-full ${objPos}`}
+            priority={priority}
+          />
         </div>
         <div className="flex-1">
           <h3 className="font-semibold" style={{fontFamily:'Playfair Display'}}>{product.name}</h3>
@@ -46,11 +57,13 @@ export default function ProductCard({ product, priority = false }: { product: Pr
               &times;
             </button>
             <div className="relative w-full h-[80vh]">
-              <Image
-                src={product.image || '/placeholder.png'}
+              <CldImage
+                src={product.image || 'placeholder'}
                 alt={product.name}
                 fill
                 sizes="(max-width: 768px) 100vw, 672px"
+                quality="auto"
+                format="auto"
                 className="object-contain"
               />
             </div>

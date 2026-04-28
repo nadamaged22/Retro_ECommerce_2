@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useCart } from '../context/CartContext'
@@ -8,6 +8,7 @@ export default function Navbar(){
   const [open, setOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { itemCount } = useCart()
+  useEffect(() => { setMounted(true) }, [])
   return (
     <header className="bg-white border-b border-retroTan">
       <div className="container flex items-center justify-between py-4">
